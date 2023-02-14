@@ -73,7 +73,10 @@ int IndexOf(int[] ar, int find)
   return position;
 }
 
-int[] array = new int[10];
+Console.Write("Enter length of an array = ");
+int arrayLength=Convert.ToInt32(Console.ReadLine());
+
+int[] array = new int[arrayLength];
 
 FillArray(array);
 PrintArray(array);
