@@ -36,3 +36,5 @@ if (size%2==1) multiplyArray[sizeMultiplyArray-1]=array[size/2];
 Console.WriteLine("\n" + $"Заданный массив [{String.Join("; ", array)}]");
 Console.WriteLine("\n" + $"Массив произведения пар [{String.Join("; ", multiplyArray)}]" + "\n");
 
+// Array.Sort(array); // сортировка массива по возрастанию
+// Console.WriteLine($"{String.Join("; ", array)}");
