@@ -52,6 +52,11 @@ int CheckRowsCols(int number)
   return number;
 }
 
+void SumEveryRow(int[,] inputMatrix)
+{
+
+}
+
 Console.Write("Введите количество строк: ");
 int rows = Convert.ToInt32(Console.ReadLine());
 rows = CheckRowsCols(rows);
@@ -94,4 +99,6 @@ while ((answerTwo<1) || (answerTwo>5))
   Console.WriteLine("Такого варианта нет." + "\n" + "Введите свой ответ снова: ");
   answerTwo = Convert.ToInt32(Console.ReadLine());
 }
+
+if (answerTwo == 1) SumEveryRow(matrix);
 
