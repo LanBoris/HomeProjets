@@ -72,4 +72,4 @@ Console.WriteLine("\n" + "Чтобы получить ответы на прми
 Console.ReadKey();
 Console.WriteLine("\n" + $"Ответы: {String.Join("; ", answers)}");
 Console.ForegroundColor = ConsoleColor.White;
-
+Console.ReadKey();
