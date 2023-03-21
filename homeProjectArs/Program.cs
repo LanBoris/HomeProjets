@@ -1,7 +1,7 @@
-﻿Console.Clear();
+﻿
 
 // Генератор математических примеров!
-
+Console.Clear();
 Console.Write("Введите нужное количество примеров: ");
 int count = Convert.ToInt32(Console.ReadLine());
 Console.Write("Введите минимальное значение интервала чисел: ");
