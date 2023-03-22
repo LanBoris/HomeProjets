@@ -54,7 +54,28 @@ int CheckRowsCols(int number)
 
 void SumEveryRow(int[,] inputMatrix)
 {
+  for (int i = 0; i < inputMatrix.GetLength(0); i++)
+  {
+    int sum = 0;
+    for (int j = 0; j < inputMatrix.GetLength(1); j++)
+    {
+      sum+=inputMatrix[i,j];
+    }
+    Console.WriteLine($"Summ row {i+1}: {sum}");
+  }
+}
 
+void SumEveryCol(int[,] inputMatrix)
+{
+  for (int i = 0; i < inputMatrix.GetLength(1); i++)
+  {
+    int sum = 0;
+    for (int j = 0; j < inputMatrix.GetLength(0); j++)
+    {
+      sum+=inputMatrix[j,i];
+    }
+    Console.WriteLine($"Summ column {i+1}: {sum}");
+  }
 }
 
 Console.Write("Введите количество строк: ");
@@ -84,7 +105,6 @@ else if (answerOne == 2)
   matrix = FillMatrix2(rows, columns, minValue, maxValue);
 }
 
-PrintMatrix(matrix);
 
 Console.Write("\n" + "Какое действие вы хотите выполнить с данным массивом?:" 
                    + "\n" + "1. Найти сумму элементов по строкам."
@@ -99,6 +119,6 @@ while ((answerTwo<1) || (answerTwo>5))
   Console.WriteLine("Такого варианта нет." + "\n" + "Введите свой ответ снова: ");
   answerTwo = Convert.ToInt32(Console.ReadLine());
 }
-
+PrintMatrix(matrix);
 if (answerTwo == 1) SumEveryRow(matrix);
-
+if (answerTwo == 2) SumEveryCol(matrix);
